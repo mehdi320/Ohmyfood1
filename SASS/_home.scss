@@ -23,7 +23,6 @@ $loader-animation: spin 1s linear infinite;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
   animation: stop 3s linear;
   opacity: 0; /* Définissez l'opacité par défaut à 0 */
   transition: opacity 0.5s linear; /* Ajoutez une transition par défaut */
