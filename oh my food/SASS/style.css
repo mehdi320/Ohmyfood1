@@ -1,0 +1,812 @@
+@charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --grey: #353535;
+  --white: #fff;
+  --gris: #f6f6f6 ;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: stop 3s linear;
+  opacity: 0; /* Définissez l'opacité par défaut à 0 */
+  transition: opacity 0.5s linear; /* Ajoutez une transition par défaut */
+}
+
+.loading {
+  border: 6px solid #3498db;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes stop {
+  0% {
+    opacity: 0;
+    transform: scale(1); /* Taille d'origine et opacité à 0 */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1); /* Laissez l'opacité à 1 pendant la moitié de l'animation */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1); /* Revenir à la taille d'origine et opacité à 0 */
+  }
+}
+.loader-container.stop {
+  opacity: 1;
+  transition: opacity 0.5s linear; /* Transition pour l'état "stop" */
+}
+
+.loader-container.stop {
+  opacity: 1;
+  transition: opacity 0.5s linear; /* Transition pour l'état "stop" */
+}
+
+/*ajout du keyframes pour stopper le loader (opacité, stopper le "spin", enlever "le logo de chargement"*/
+/* Styles pour le contenu de votre page */
+.all {
+  margin: 0;
+}
+
+.location {
+  display: flex;
+  background-color: #eaeaea;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+.location__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+  border-top: 2px solid #eaeaea;
+  font-size: 16px;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  height: 63px;
+  gap: 10px;
+}
+
+.hero {
+  background-color: #f6f6f6;
+  justify-content: center;
+  display: grid;
+}
+.hero__title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+@media (min-width: 1440px) {
+  .hero__title {
+    text-align: center;
+  }
+}
+.hero__subtitle {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+}
+@media (min-width: 1440px) {
+  .hero__subtitle {
+    text-align: center;
+  }
+}
+.hero__button {
+  width: 200px;
+  height: 58px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(194deg, #9356dc 0%, #ff79da 100%);
+  color: white;
+  margin: 0 auto;
+  /* Ajoutez la classe .button pour appliquer l'animation */
+  position: relative; /* Ajouter une position relative pour créer un pseudo-élément */
+  margin-bottom: 40px;
+}
+.hero__button::before { /* Utiliser un pseudo-élément pour l'effet de brillance */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0); /* Commencez avec une couleur transparente */
+  border-radius: inherit;
+  transition: background 0.3s, box-shadow 0.3s; /* Ajoutez une transition pour un effet de transition doux */
+}
+.hero__button__position {
+  display: flex;
+  justify-content: center;
+}
+.hero__button:hover::before { /* Appliquer l'effet de brillance au survol */
+  background: rgba(255, 255, 255, 0.3); /* Léger effet de blanc brillant */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Changement d'ombre pour l'effet de brillance */
+}
+
+.fa-location-dot {
+  display: grid;
+  justify-items: flex-start;
+}
+
+.container__cur {
+  margin-top: 50px;
+  text-align: center;
+}
+@media (min-width: 1440px) {
+  .container__cur {
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px 180px;
+    gap: 25px;
+    display: flex;
+  }
+}
+
+.cur {
+  width: 100%;
+  height: 72px;
+  background: #f6f6f6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.cur__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding-right: 20px;
+  padding-bottom: 26px;
+}
+
+.restaurant {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+.i-restaurant {
+  padding-right: 27px;
+  color: #9356dc;
+}
+
+.menus {
+  align-items: flex-start;
+  display: flex;
+  gap: 28px;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+@media (min-width: 1440px) {
+  .menus {
+    display: grid;
+    padding: 0px 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    align-self: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #f6f6f6;
+  }
+}
+.menus__container {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+  background-color: #f6f6f6;
+}
+.menus__card {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+}
+@media (min-width: 1440px) {
+  .menus__card {
+    width: 490px;
+    height: 100%;
+  }
+}
+.menus__img {
+  width: 100%;
+  height: 231px;
+  align-self: stretch;
+}
+@media (min-width: 1440px) {
+  .menus__img {
+    width: 100%;
+    height: 231px;
+    align-self: stretch;
+  }
+}
+.menus__title {
+  padding-left: 13px;
+  font-family: "Roboto", sans-serif;
+}
+.menus__subtitles {
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  padding-left: 13px;
+}
+.menus__icon {
+  position: absolute;
+  top: 85%;
+  right: 50px;
+  transform: translateY(-50%);
+  font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
+  transition: color 0.3s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
+}
+.menus__icon.heart:before {
+  content: "\f004"; /* Code Unicode pour le cœur vide (utilisez le code approprié pour votre police d'icônes) */
+}
+.menus__icon.heart.clicked {
+  color: pink; /* Couleur du cœur en rose lorsque cliqué */
+}
+
+.footers {
+  display: flex;
+  width: auto;
+  height: 100%;
+  padding: 30px 25px;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-direction: column;
+  background-color: var(--grey);
+  margin-top: 66px;
+}
+@media (min-width: 1440px) {
+  .footers {
+    display: flex;
+    padding: 22px 25px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 16px;
+    background-color: var(--grey);
+    margin-top: 30px;
+  }
+}
+.footers__logo {
+  display: flex;
+  width: 139px;
+  height: 27px;
+  padding-right: 0px;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1440px) {
+  .footers__logo {
+    margin-left: 16px;
+  }
+}
+.footers__logo-img {
+  max-width: 100%;
+  height: auto;
+}
+.footers__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+@media (min-width: 1440px) {
+  .footers__links {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 7px;
+  }
+}
+.footers__icon {
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  padding-left: 11px;
+}
+.footers__links {
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+@media (min-width: 1440px) {
+  .footers__links {
+    display: flex;
+    flex-direction: unset;
+  }
+}
+.footers__logo-img {
+  filter: invert(100%);
+}
+.footers .i-utensils {
+  color: #FFFFFF;
+  width: 11px;
+  height: 13px;
+}
+.footers .i-handshake {
+  color: #FFFFFF;
+  width: 11px;
+  height: 13px;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  height: 63px;
+  gap: 10px;
+}
+
+.button {
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(194deg, #9356DC 0%, #FF79DA 100%);
+  color: white;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 500;
+  display: grid;
+  align-content: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  border-radius: inherit;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.button__position {
+  display: flex;
+  justify-content: center;
+}
+.button:hover::before {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  /* Vos règles CSS pour 767px et moins */
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  .container-background {
+    width: 100%;
+    height: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative; /* Ajoutez le positionnement relatif */
+    top: -40px; /* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
+  }
+  /* Votre SCSS existant */
+  .entree {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .entree__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .entree__card {
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: grid;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: 69px;
+    position: relative;
+    cursor: pointer;
+  }
+  .entree .menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+  }
+  .entree .icon-circle {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .entree:hover .menu-toggle {
+    width: 40px;
+  }
+  .entree:hover .menu-toggle .icon-circle {
+    opacity: 1;
+  }
+  .entree__name {
+    font-size: 15px;
+  }
+  .entree__subtitle {
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .entree__price {
+    display: flex;
+    justify-content: end;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .entree__currency {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .plat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .plat__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .plat__card {
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: grid;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: 69px;
+  }
+  .plat__name {
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .plat__subtitle {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .plat__price {
+    display: flex;
+    justify-content: end;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .plat__currency {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .dessert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .dessert__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .dessert__card {
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: grid;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: 69px;
+  }
+  .dessert__name {
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .dessert__subtitle {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .dessert__price {
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: end;
+  }
+  .dessert__currency {
+    display: contents;
+  }
+  .green-line {
+    width: 40px;
+    height: 3px;
+    background-color: #99E2D0;
+    border: 1px solid #99E2D0;
+  }
+  .footer {
+    display: flex;
+    width: auto;
+    height: 100%;
+    padding: 30px 25px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 16px;
+    flex-direction: column;
+    background-color: var(--grey);
+  }
+  .footer__logo {
+    display: flex;
+    width: 139px;
+    height: 27px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__logo-img {
+    max-width: 100%;
+    height: auto;
+    filter: invert(100%);
+  }
+  .footer__links {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    flex-direction: column;
+  }
+  .footer__icon {
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .footer__link {
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+  }
+}
+@media (max-width: 767px) and (max-width: 1440px) {
+  /* Vos règles CSS pour 1440px et moins */
+}
+@media (max-width: 767px) {
+  .footer {
+    display: flex;
+    width: auto;
+    height: 100%;
+    padding: 30px 25px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 16px;
+    flex-direction: row-reverse;
+    background-color: var(--grey);
+  }
+  .footer__logo {
+    display: flex;
+    width: 139px;
+    height: 27px;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__logo-img {
+    max-width: 100%;
+    height: auto;
+    filter: invert(100%);
+  }
+  .footer__links {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    flex-direction: row;
+  }
+  .footer__icon {
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .footer__link {
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+  }
+  .entree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .entree__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .entree__card {
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: grid;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: 69px;
+    align-content: center;
+  }
+  .entree__name {
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .entree__subtitle {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .entree__price {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .entree__currency {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .plat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .plat__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .plat__card {
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: grid;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: 69px;
+    align-content: center;
+  }
+  .plat__name {
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .plat__subtitle {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .plat__price {
+    text-align: right;
+  }
+  .plat__currency {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .dessert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .dessert__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .dessert__card {
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    display: grid;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: 69px;
+    align-content: center;
+  }
+  .dessert__name {
+    overflow: hidden;
+    font-size: 15px;
+  }
+  .dessert__subtitle {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .dessert__price {
+    text-align: right;
+  }
+  .dessert__currency {
+    display: contents;
+  }
+  .green-line {
+    width: 40px;
+    height: 3px;
+    background-color: #99E2D0;
+    border: 1px solid #99E2D0;
+  }
+}/*# sourceMappingURL=style.css.map */
