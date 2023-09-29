@@ -1,0 +1,462 @@
+@media (max-width: 767px){
+  /* Vos règles CSS pour 767px et moins */
+
+
+.image{
+ width: 100%;
+ height: auto;
+}
+
+.container-background {
+  width: 100%;
+  height: auto;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative; /* Ajoutez le positionnement relatif */
+  top: -40px; /* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
+}
+
+/* Votre SCSS existant */
+
+
+.entree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  &__title {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__card {
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    align-items: center;
+    display: grid;
+    padding: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: 69px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;}
+
+    .icon-circle {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+
+  &:hover .menu-toggle {
+    width: 40px; // Largeur pour afficher l'icône
+  }
+
+  &:hover .menu-toggle .icon-circle {
+    opacity: 1; // Rend l'icône visible
+  }
+
+
+  &__name {
+    font-size: 15px;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: end;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  &__currency {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+
+}
+
+
+
+
+
+.plat{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  &__title{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &__card{
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    align-items: center; 
+    display: grid;
+    padding: 15px;
+    border-radius:  15px;
+    width: auto;
+    height: 69px;
+  }
+  &__name{
+    overflow: hidden;
+    font-size: 15px;
+    }
+  &__subtitle{
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+     }
+  
+  &__price{
+    display: flex;
+    justify-content: end;
+    font-size: 15px;
+    font-weight: 700;
+ 
+    }
+    &__currency{
+      font-size: 15px;
+      font-weight: 700;
+      }
+    }
+
+
+.dessert{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  
+  &__title{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+  }
+  &__card{
+    align-self: stretch;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+  align-items: center; 
+  display: grid;
+  padding: 15px;
+  border-radius:  15px;
+  width: auto;
+  height: 69px;
+  }
+  &__name{
+  overflow: hidden;
+  font-size: 15px;
+  }
+  &__subtitle{
+ overflow: hidden;
+ font-size: 15px;
+ font-weight: 300;
+  }
+  &__price{
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: end;
+  
+    }
+    &__currency{
+      display: contents;
+      }
+}
+
+.green-line {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  border: 1px solid #99E2D0;
+}
+
+.footer {
+  display: flex;
+  width: auto;
+  height: 100%;
+  padding: 30px 25px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+  flex-direction: column;
+  background-color: var(--grey);
+
+&__logo {
+  display: flex;
+  width: 139px;
+  height: 27px;
+  justify-content: center;
+  align-items: center;
+}
+
+&__logo-img {
+  max-width: 100%;
+  height: auto;
+  filter: invert(100%);
+}
+
+&__links {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  flex-direction: column;
+}
+
+&__icon {
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+&__link {
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;}
+
+}
+
+@media (max-width: 1440px){
+  /* Vos règles CSS pour 1440px et moins */
+}
+
+
+///footer 1440px///
+.footer {
+  display: flex;
+  width: auto;
+  height: 100%;
+  padding: 30px 25px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+  flex-direction: row-reverse;
+  background-color: var(--grey);
+
+&__logo {
+  display: flex;
+  width: 139px;
+  height: 27px;
+  justify-content: center;
+  align-items: center;
+}
+
+&__logo-img {
+  max-width: 100%;
+  height: auto;
+  filter: invert(100%);
+}
+
+&__links {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  flex-direction: row;
+}
+
+&__icon {
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+&__link {
+  color: var(--white);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;}
+
+}
+
+
+
+///entree 1440px///
+.entree{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+&__title{
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+}
+
+&__card{
+  align-self: stretch;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+  align-items: center; 
+  display: grid;
+  padding: 15px;
+  border-radius:  15px;
+  width: auto;
+  height: 69px;
+  align-content: center;
+}
+
+&__name{
+  overflow: hidden;
+  font-size: 15px;
+  }
+
+  &__subtitle{
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+&__price{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 15px;
+  font-weight: 700;
+ 
+}
+&__currency{
+  font-size: 15px;
+font-weight: 700;
+}
+}
+
+.plat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  &__title{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  &__card{
+    align-self: stretch;
+    background: white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    align-items: center; 
+    display: grid;
+    padding: 15px;
+    border-radius:  15px;
+    width: auto;
+    height: 69px;
+    align-content: center;
+  }
+  &__name{
+    overflow: hidden;
+    font-size: 15px;
+    }
+  &__subtitle{
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 300;
+     }
+  
+  &__price{
+    text-align: right;
+ 
+    }
+    &__currency{
+      font-size: 15px;
+      font-weight: 700;
+      }
+    }
+
+
+.dessert{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  
+  &__title{
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+
+  }
+  &__card{
+    align-self: stretch;
+  background: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+  align-items: center; 
+  display: grid;
+  padding: 15px;
+  border-radius:  15px;
+  width: auto;
+  height: 69px;
+  align-content: center;
+  }
+  &__name{
+  overflow: hidden;
+  font-size: 15px;
+  }
+  &__subtitle{
+ overflow: hidden;
+ font-size: 15px;
+ font-weight: 300;
+  }
+  &__price{
+    text-align: right;
+  
+    }
+    &__currency{
+      display: contents;
+      }
+}
+
+.green-line {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  border: 1px solid #99E2D0;
+}
+}
