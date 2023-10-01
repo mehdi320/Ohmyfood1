@@ -297,6 +297,25 @@ margin: 0;
   border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
 }
 
+.heart-toggle-2:checked + label::before {
+  content: '\f004'; /* Code Unicode pour le cœur rempli */
+  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
+  background: pink; /* Fond rose pour remplir tout le cœur */
+  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
+}
+.heart-toggle-3:checked + label::before {
+  content: '\f004'; /* Code Unicode pour le cœur rempli */
+  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
+  background: pink; /* Fond rose pour remplir tout le cœur */
+  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
+}
+.heart-toggle-4:checked + label::before {
+  content: '\f004'; /* Code Unicode pour le cœur rempli */
+  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
+  background: pink; /* Fond rose pour remplir tout le cœur */
+  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
+}
+
 .heart-toggle {
   display: none;
 }
