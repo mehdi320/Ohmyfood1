@@ -69,10 +69,7 @@ $loader-animation: spin 1s linear infinite;
 }
 
 
-/*ajout du keyframes pour stopper le loader (opacité, stopper le "spin", enlever "le logo de chargement"*/
 
-
-/* Styles pour le contenu de votre page */
 
 .all{
 margin: 0;
@@ -288,13 +285,20 @@ margin: 0;
   font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
   transition: color 0.3s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
 }
-&__icon.heart {
-  &:before {
-    content: '\f004'; /* Code Unicode pour le cœur vide (utilisez le code approprié pour votre police d'icônes) */
-  }
+&__icon.heart::before {
+  content: '\f004'; /* Code Unicode pour le cœur vide (utilisez le code approprié pour votre police d'icônes) */
+  color: inherit; /* Couleur du texte par défaut (peut être modifiée plus tard) */
 }
-&__icon.heart.clicked {
-  color: pink; /* Couleur du cœur en rose lorsque cliqué */
+
+.heart-toggle:checked + label::before {
+  content: '\f004'; /* Code Unicode pour le cœur rempli */
+  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
+  background: pink; /* Fond rose pour remplir tout le cœur */
+  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
+}
+
+.heart-toggle {
+  display: none;
 }
 }
 
