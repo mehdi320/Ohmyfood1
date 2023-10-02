@@ -266,14 +266,20 @@
   font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
   transition: color 0.3s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
 }
-.menus__icon.heart::before {
-  content: "\f004"; /* Code Unicode pour le cœur vide (utilisez le code approprié pour votre police d'icônes) */
-  color: inherit; /* Couleur du texte par défaut (peut être modifiée plus tard) */
+.menus .heart-container {
+  position: relative;
+  display: inline-block;
+  width: 24px; /* Ajustez la largeur selon vos besoins */
+  height: 24px; /* Ajustez la hauteur selon vos besoins */
+  cursor: pointer;
 }
-.menus .heart-toggle:checked + label::before {
-  content: "\f004"; /* Code Unicode pour le cœur rempli */
-  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
-  background-color: pink; /* Fond rose pour remplir tout le cœur */
+.menus .heart-icon {
+  font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
+  color: transparent; /* Cœur initial transparent */
+  transition: color 0.3s ease-in-out; /* Transition de la couleur */
+}
+.menus .heart-container:hover .heart-icon {
+  color: pink; /* Couleur rose au survol */
 }
 .menus .heart-toggle {
   display: none;
