@@ -273,26 +273,7 @@
 .menus .heart-toggle:checked + label::before {
   content: "\f004"; /* Code Unicode pour le cœur rempli */
   color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
-  background: pink; /* Fond rose pour remplir tout le cœur */
-  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
-}
-.menus .heart-toggle-2:checked + label::before {
-  content: "\f004"; /* Code Unicode pour le cœur rempli */
-  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
-  background: pink; /* Fond rose pour remplir tout le cœur */
-  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
-}
-.menus .heart-toggle-3:checked + label::before {
-  content: "\f004"; /* Code Unicode pour le cœur rempli */
-  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
-  background: pink; /* Fond rose pour remplir tout le cœur */
-  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
-}
-.menus .heart-toggle-4:checked + label::before {
-  content: "\f004"; /* Code Unicode pour le cœur rempli */
-  color: transparent; /* Rendre le cœur vide de la même couleur que le texte */
-  background: pink; /* Fond rose pour remplir tout le cœur */
-  border-radius: 50%; /* Assurez-vous que le cœur est circulaire */
+  background-color: pink; /* Fond rose pour remplir tout le cœur */
 }
 .menus .heart-toggle {
   display: none;
@@ -495,14 +476,26 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
+  .entree .menu-toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .entree .menu-toggle {
+    display: none; /* Pour cacher la checkbox */
+  }
   .entree .menu-toggle:checked + .menu-toggle-label .icon-circle {
     opacity: 1;
   }
   .entree .menu-toggle:checked + .menu-toggle-label {
     width: 40px; /* Largeur pour afficher l'icône */
   }
-  .entree .menu-toggle {
-    display: none; /* Pour cacher la checkbox */
+  .entree .icon-circle {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .entree .menu-toggle-label:hover .menu-toggle {
+    display: block;
   }
   .entree__name {
     font-size: 15px;

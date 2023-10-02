@@ -64,7 +64,16 @@
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
-  
+    .menu-toggle-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .menu-toggle {
+      display: none; /* Pour cacher la checkbox */
+    }
+    
     .menu-toggle:checked + .menu-toggle-label .icon-circle {
       opacity: 1;
     }
@@ -73,9 +82,15 @@
       width: 40px; /* Largeur pour afficher l'icône */
     }
     
-    .menu-toggle {
-      display: none; /* Pour cacher la checkbox */
+    .icon-circle {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
+    
+    .menu-toggle-label:hover .menu-toggle {
+      display: block;
+    }
+    
 
   &__name {
     font-size: 15px;
