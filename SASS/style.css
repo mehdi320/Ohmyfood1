@@ -495,11 +495,14 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
-  .entree:hover .menu-toggle {
-    width: 40px;
-  }
-  .entree:hover .menu-toggle .icon-circle {
+  .entree .menu-toggle:checked + .menu-toggle-label .icon-circle {
     opacity: 1;
+  }
+  .entree .menu-toggle:checked + .menu-toggle-label {
+    width: 40px; /* Largeur pour afficher l'icône */
+  }
+  .entree .menu-toggle {
+    display: none; /* Pour cacher la checkbox */
   }
   .entree__name {
     font-size: 15px;

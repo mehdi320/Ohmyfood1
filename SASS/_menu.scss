@@ -65,15 +65,17 @@
       transition: opacity 0.3s ease-in-out;
     }
   
-
-  &:hover .menu-toggle {
-    width: 40px; // Largeur pour afficher l'icône
-  }
-
-  &:hover .menu-toggle .icon-circle {
-    opacity: 1; // Rend l'icône visible
-  }
-
+    .menu-toggle:checked + .menu-toggle-label .icon-circle {
+      opacity: 1;
+    }
+    
+    .menu-toggle:checked + .menu-toggle-label {
+      width: 40px; /* Largeur pour afficher l'icône */
+    }
+    
+    .menu-toggle {
+      display: none; /* Pour cacher la checkbox */
+    }
 
   &__name {
     font-size: 15px;
