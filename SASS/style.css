@@ -204,6 +204,8 @@
   gap: 28px;
   flex-direction: column;
   background-color: #f6f6f6;
+  /* Styles pour le cœur rose */
+  /* Effet de survol */
 }
 @media (min-width: 1440px) {
   .menus {
@@ -264,25 +266,18 @@
   right: 50px;
   transform: translateY(-50%);
   font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
-  transition: color 0.3s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
+  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
 }
-.menus .heart-container {
-  position: relative;
-  display: inline-block;
-  width: 24px; /* Ajustez la largeur selon vos besoins */
-  height: 24px; /* Ajustez la hauteur selon vos besoins */
-  cursor: pointer;
+.menus .heart-pink {
+  color: transparent; /* Le cœur rose est initialement transparent */
+  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
 }
-.menus .heart-icon {
-  font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
-  color: transparent; /* Cœur initial transparent */
-  transition: color 0.3s ease-in-out; /* Transition de la couleur */
-}
-.menus .heart-container:hover .heart-icon {
-  color: pink; /* Couleur rose au survol */
-}
-.menus .heart-toggle {
-  display: none;
+.menus .menus__icon:hover + .heart-pink {
+  color: #ffb6c1; /* Couleur rose au survol du cœur de base */
+  top: 81%;
+  right: 49px;
+  font-size: 26px;
+  position: absolute;
 }
 
 .footers {

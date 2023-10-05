@@ -283,31 +283,24 @@ margin: 0;
   right: 50px;
   transform: translateY(-50%);
   font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
-  transition: color 0.3s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
+  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
 }
-.heart-container {
-  position: relative;
-  display: inline-block;
-  width: 24px; /* Ajustez la largeur selon vos besoins */
-  height: 24px; /* Ajustez la hauteur selon vos besoins */
-  cursor: pointer;
+/* Styles pour le cœur rose */
+.heart-pink {
+  color: transparent; /* Le cœur rose est initialement transparent */
+  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
 }
 
-.heart-icon {
-  font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
-  color: transparent; /* Cœur initial transparent */
-  transition: color 0.3s ease-in-out; /* Transition de la couleur */
+/* Effet de survol */
+.menus__icon:hover + .heart-pink {
+  color: #ffb6c1; /* Couleur rose au survol du cœur de base */
+  top: 81%;
+  right: 49px;
+  font-size: 26px;
+  position: absolute;
+}
 }
 
-.heart-container:hover .heart-icon {
-  color: pink; /* Couleur rose au survol */
-}
-
-
-.heart-toggle {
-  display: none;
-}
-}
 
 ///footer///
 .footers {
