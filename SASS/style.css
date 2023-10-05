@@ -461,43 +461,6 @@
     position: relative;
     cursor: pointer;
   }
-  .entree .menu-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 100%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    transition: width 0.3s ease-in-out;
-  }
-  .entree .icon-circle {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  .entree .menu-toggle-label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  .entree .menu-toggle {
-    display: none; /* Pour cacher la checkbox */
-  }
-  .entree .menu-toggle:checked + .menu-toggle-label .icon-circle {
-    opacity: 1;
-  }
-  .entree .menu-toggle:checked + .menu-toggle-label {
-    width: 40px; /* Largeur pour afficher l'icône */
-  }
-  .entree .icon-circle {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  .entree .menu-toggle-label:hover .menu-toggle {
-    display: block;
-  }
   .entree__name {
     font-size: 15px;
   }
@@ -514,6 +477,19 @@
   .entree__currency {
     font-size: 15px;
     font-weight: 700;
+  }
+  .checks {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: #2a7b14; /* Assurez-vous que la couleur est correcte */
+    font-size: 24px;
+  }
+  .entree__card:hover .check {
+    opacity: 1;
   }
   .plat {
     display: flex;
