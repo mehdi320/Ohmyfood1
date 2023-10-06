@@ -158,6 +158,8 @@
 .container__cur {
   margin-top: 50px;
   text-align: center;
+  padding-left: 32px;
+  padding-right: 20px;
 }
 @media (min-width: 1440px) {
   .container__cur {
@@ -183,8 +185,13 @@
 .cur__title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  padding-right: 20px;
-  padding-bottom: 26px;
+  margin-top: -25px;
+  padding-left: 15px;
+}
+.cur__restaurant {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding-left: 32px;
 }
 
 .restaurant {
@@ -196,6 +203,10 @@
 .i-restaurant {
   padding-right: 27px;
   color: #9356dc;
+}
+
+.i-restaurants {
+  padding-right: 27px;
 }
 
 .menus {
@@ -278,6 +289,19 @@
   right: 49px;
   font-size: 26px;
   position: absolute;
+}
+
+.new_badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--Green-Font, #99E2D0); /* Couleur de fond de l'encadrement */
+  color: #008766; /* Couleur du texte */
+  padding: 5px; /* Espace à l'intérieur de l'encadrement */
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 15px;
+  margin-top: 15px;
 }
 
 .footers {
