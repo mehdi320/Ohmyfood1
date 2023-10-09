@@ -1,6 +1,5 @@
-@media (max-width: 767px){
-  /* Vos règles CSS pour 767px et moins */
 
+$breakpoint-desktop:(1440px);
 
 .image{
  width: 100%;
@@ -10,12 +9,23 @@
 .container-background {
   width: 100%;
   height: auto;
-  height: fit-content;
   background-color: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   position: relative; /* Ajoutez le positionnement relatif */
   top: -40px; /* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
+  @media (min-width:1440px){
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative; /* Ajoutez le positionnement relatif */
+    top: -40px;/* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
+
+  }
+    
+  
 }
 
 /* Votre SCSS existant */
@@ -46,6 +56,12 @@
     height: 69px;
     position: relative;
     cursor: pointer;
+
+    @media (min-width:1440px){
+      width: 100%;
+      font-size: 20px;
+      background-color: red($color: #000000);
+    }
   }
 
   &__name {
@@ -444,5 +460,4 @@ font-weight: 700;
   height: 3px;
   background-color: #99E2D0;
   border: 1px solid #99E2D0;
-}
 }
