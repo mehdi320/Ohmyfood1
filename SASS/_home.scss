@@ -212,11 +212,6 @@ margin: 0;
     padding-left: 32px;
   }
 }
-.restaurant {
-  width: 100%;
-  height: 100%;
-  background-color: #f6f6f6;
-}
 
 .i-restaurant {
   padding-right: 27px;
@@ -227,24 +222,56 @@ margin: 0;
   padding-right: 27px;
   }
 
-  .circle {
-    width: 90px;
-    height: 24px;
+  .custom-circle {
+    width: 12px;
+    height: 12px;
     background-color: #9356DC;
-    color: white;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    margin: 5px;
-    float: left;
-    position: relative; /* Ajoutez position relative pour positionner le chiffre */
-    left: 0;
-
+    font-weight: 500;
+    font-style: normal;
+    @media (min-width:1440px){
+    color: #9356DC; /* Couleur violette */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #9356DC; /* Couleur violette */
+    font-style: normal;
+    font-weight: 500;
+    }
   }
   
+.white-text{
+  color: #ffff;
+  display: grid;
+ justify-content: center;
+ position: absolute;
+  @media (min-width:1440px){
+  color: #ffff;
+ display: grid;
+ justify-content: center;
+ position: absolute;
+  }
+}
 
+.Restaurants{
+  @media (min-width:1440px){
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  padding-left: 180px;
+  padding-bottom: 30px;
+  position: absolute;
+  z-index: 2;
+  top: 576px;
+  left: 10px;
+  }
+}
 ///ceci est la partie des menus///
 
 .menus {
@@ -264,6 +291,7 @@ margin: 0;
     align-self: stretch;
     grid-template-columns: repeat(2, 1fr);
     background-color: #f6f6f6;
+    padding-top: 58px;
   }
   
   
