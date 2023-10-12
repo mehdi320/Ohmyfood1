@@ -89,7 +89,7 @@ $breakpoint-desktop:(1440px);
 }
 
 
-.checks {
+.check {
   position: absolute;
   top: 50%;
   right: 0;
@@ -100,7 +100,7 @@ $breakpoint-desktop:(1440px);
   font-size: 24px;
 }
 
-.entree__card:hover .check {
+.check:hover {
   opacity: 1;
 }
 
@@ -266,7 +266,7 @@ $breakpoint-desktop:(1440px);
   width: auto;
   height: 100%;
   padding: 30px 25px;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: flex-end;
   gap: 16px;
   flex-direction: row-reverse;
@@ -284,6 +284,7 @@ $breakpoint-desktop:(1440px);
   max-width: 100%;
   height: auto;
   filter: invert(100%);
+  margin-left: 16px;
 }
 
 &__links {
@@ -300,6 +301,8 @@ $breakpoint-desktop:(1440px);
   font-weight: 500;
   line-height: normal;
   text-decoration: none;
+  padding-left: 5px;
+  
 }
 
 &__link {
@@ -308,11 +311,23 @@ $breakpoint-desktop:(1440px);
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
-  text-decoration: none;}
+  text-decoration: none;
+  padding-left: 29px;
+}
 
 }
 
+.i-utensils{
+  color: #FFFFFF;
+  width: 11px;
+  height: 13px;
+  }
 
+.i-handshake{
+  color: #FFFFFF;
+  width: 11px;
+  height: 13px;
+  }
 
 ///entree 1440px///
 .entree{
