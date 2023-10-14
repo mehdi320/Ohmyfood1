@@ -15,14 +15,15 @@ $breakpoint-desktop:(1440px);
   position: relative; /* Ajoutez le positionnement relatif */
   top: -40px; /* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
   @media (min-width:1440px){
-    width: 100%;
+    width: 80%;
     height: auto;
     background-color: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative; /* Ajoutez le positionnement relatif */
     top: -40px;/* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
-
+    margin-left: auto;
+    margin-right: auto;
   }
     
   

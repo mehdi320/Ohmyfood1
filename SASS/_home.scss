@@ -220,42 +220,41 @@ margin: 0;
 
 .i-restaurants{
   padding-right: 27px;
-  }
+}
 
-  .custom-circle {
-    width: 12px;
-    height: 12px;
-    background-color: #9356DC;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    font-weight: 500;
-    font-style: normal;
-    @media (min-width:1440px){
-    color: #9356DC; /* Couleur violette */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #9356DC; /* Couleur violette */
-    font-style: normal;
-    font-weight: 500;
-    }
+.custom__number{
+  color: #9356dc;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  position: relative;
+  top: 8%;
+  @media (min-width:1440px){
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #9356dc;
+  width: 0;
+  height: 0;
+  position: relative;
+  top: 7%;
   }
-  
+}
+
 .white-text{
   color: #ffff;
   display: grid;
- justify-content: center;
  position: absolute;
+ margin-left:3px;
+ font-weight: 500;
+ top: 10%;
+ 
   @media (min-width:1440px){
-  color: #ffff;
- display: grid;
- justify-content: center;
- position: absolute;
+ top:69%;
+ margin-left:3px;
+ font-weight: 500;
+ color: #fff;
   }
 }
 
@@ -350,7 +349,7 @@ margin: 0;
 /* Effet de survol */
 .menus__icon:hover + .heart-pink {
   color: #ffb6c1; /* Couleur rose au survol du cœur de base */
-  top: 85px;
+  top: 290px;
   right: 50px;
   font-size: 24px;
   position: absolute;
