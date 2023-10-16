@@ -38,6 +38,8 @@ $breakpoint-desktop:(1440px);
   align-items: flex-start;
   gap: 12px;
 
+  
+
   &__title {
     font-family: Roboto;
     font-size: 16px;
@@ -90,20 +92,30 @@ $breakpoint-desktop:(1440px);
 }
 
 
-.check {
+.image-container {
   position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  color: #2a7b14; /* Assurez-vous que la couleur est correcte */
-  font-size: 24px;
+  top: 0;
+  left: 100%; /* Placez l'image à côté de la carte, ajustez cette valeur selon vos besoins */
+  display: none; /* Cachez l'image initialement */
 }
 
-.check:hover {
-  opacity: 1;
+.image-container .image {
+  width: 92px;
+  height: 100px;
+  position: absolute;
+  left: 800px;
+  top: -1px;
+  border-radius: 15.043px;
+background: var(--White, #FFF);
+box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
 }
+
+.card-container:hover .image-container {
+  left: 635px; /* Réglez la position pour que l'image apparaisse à l'endroit souhaité */
+  display: block; /* Affichez l'image au survol */
+}
+
+
 
 
 .plat{
