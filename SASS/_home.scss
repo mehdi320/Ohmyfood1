@@ -12,6 +12,8 @@ $breakpoint-desktop: (1440px);
 
 $loader-animation: spin 1s linear infinite;
 
+
+// ceci est le loader
 .loader-container {
   position: fixed;
   top: 0;
@@ -265,6 +267,9 @@ $loader-animation: spin 1s linear infinite;
   }
 }
 
+
+
+// prendre ce qu'il y'a a prendre dans white-text et le mettre dans before 1,2 et3
 .white-text {
   color: #ffff;
   display: grid;

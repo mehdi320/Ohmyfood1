@@ -542,6 +542,15 @@
   }
 }
 
+@media (min-width: 1440px) {
+  .container-menu {
+    display: inherit;
+    padding: 15px;
+    width: 44%;
+    margin-left: 25%;
+  }
+}
+
 /* Votre SCSS existant */
 .entree {
   display: flex;
