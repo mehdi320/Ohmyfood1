@@ -1,5 +1,6 @@
 
 $breakpoint-desktop:(1440px);
+$breakpoint-tablette: (1024px);
 
 .image{
  width: 100%;
@@ -10,7 +11,7 @@ $breakpoint-desktop:(1440px);
   width: 100%;
   height: auto;
   background-color: white;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  
   border-radius: 15px;
   position: relative; /* Ajoutez le positionnement relatif */
   top: -40px; /* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
@@ -29,6 +30,8 @@ $breakpoint-desktop:(1440px);
 
 
 .container-menu{
+  padding-left: 10px;
+  padding-right: 10px;
 @media (min-width:1440px){
 display: inherit;
 padding: 15px;
@@ -52,6 +55,8 @@ margin-left: 25%;
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
+    margin-right: 87%;
+    margin-bottom: 0;
   }
 
   &__card {
@@ -98,6 +103,12 @@ margin-left: 25%;
 
 }
 
+.green-line {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  border: 1px solid #99E2D0;
+}
 
 .svg-container {
   position: absolute;
@@ -321,14 +332,23 @@ top: -20px;
 ///footer 1440px///
 .footer {
   display: flex;
-  width: auto;
-  height: 100%;
-  padding: 30px 25px;
-  justify-content: end;
-  align-items: flex-end;
+  width: 100%;
+  padding: 22px 25px;
+  align-items: flex-start;
   gap: 16px;
-  flex-direction: row-reverse;
+  flex-direction: column;
   background-color: var(--grey);
+  @media (min-width:1440px){
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 30px 25px;
+  gap: 16px;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  justify-content: end;
+  }
+  
 
 &__logo {
   display: flex;
@@ -349,7 +369,12 @@ top: -20px;
   display: flex;
   align-items: flex-start;
   gap: 7px;
-  flex-direction: row;
+  @media (min-width:1440px){
+  display: flex;
+  flex-direction:revert;
+  align-items: flex-end;
+  gap: 7px;
+  }
 }
 
 &__icon {
@@ -387,148 +412,4 @@ top: -20px;
   height: 13px;
   }
 
-///entree 1440px///
-.entree{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
 
-&__title{
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: uppercase;
-
-}
-
-&__card{
-  align-self: stretch;
-  background: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-  align-items: center; 
-  display: grid;
-  padding: 15px;
-  border-radius:  15px;
-  width: auto;
-}
-
-&__name{
-  overflow: hidden;
-  font-size: 15px;
-  }
-
-  &__subtitle{
-    overflow: hidden;
-    font-size: 15px;
-    font-weight: 300;
-  }
-  
-&__price{
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  font-size: 15px;
-  font-weight: 700;
- 
-}
-&__currency{
-  font-size: 15px;
-font-weight: 700;
-}
-}
-
-.plat{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-
-  &__title{
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-  &__card{
-    align-self: stretch;
-    background: white;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    align-items: center; 
-    display: grid;
-    padding: 15px;
-    border-radius:  15px;
-    width: auto;
-    height: 69px;
-    align-content: center;
-  }
-  &__name{
-    overflow: hidden;
-    font-size: 15px;
-    }
-  &__subtitle{
-    overflow: hidden;
-    font-size: 15px;
-    font-weight: 300;
-     }
-  
-  &__price{
-    text-align: right;
- 
-    }
-    &__currency{
-      font-size: 15px;
-      font-weight: 700;
-      }
-    }
-
-
-.dessert{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  
-  &__title{
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: uppercase;
-
-  }
-  &__card{
-    align-self: stretch;
-  background: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-  align-items: center; 
-  display: grid;
-  padding: 15px;
-  border-radius:  15px;
-  width: auto;
-  height: 69px;
-  align-content: center;
-  }
-  &__name{
-  overflow: hidden;
-  font-size: 15px;
-  }
-  &__subtitle{
- overflow: hidden;
- font-size: 15px;
- font-weight: 300;
-  }
-  &__price{
-    text-align: right;
-  
-    }
-    &__currency{
-      display: contents;
-      }
-}
-
-.green-line {
-  width: 40px;
-  height: 3px;
-  background-color: #99E2D0;
-  border: 1px solid #99E2D0;
-}
