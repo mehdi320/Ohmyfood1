@@ -42,13 +42,12 @@ margin-left: 25%;
 /* Votre SCSS existant */
 
 
-.entree {
+.menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
 
-  
 
   &__title {
     font-family: Roboto;
@@ -75,7 +74,7 @@ margin-left: 25%;
     @media (min-width:1440px){
       width: 100%;
       font-size: 20px;
-      background-color: red($color: #000000);
+    
     }
   }
 
@@ -88,16 +87,11 @@ margin-left: 25%;
     font-weight: 300;
   }
 
-  &__price {
-    display: flex;
-    justify-content: end;
-    font-size: 15px;
-    font-weight: 700;
-  }
-
   &__currency {
     font-size: 15px;
     font-weight: 700;
+    display: flex;
+    justify-content: end;
   }
 
 
@@ -110,7 +104,7 @@ margin-left: 25%;
   border: 1px solid #99E2D0;
 }
 
-.svg-container {
+.anim-container {
   position: absolute;
   width: 60px;
   height: 69px;
@@ -119,7 +113,7 @@ margin-left: 25%;
   display: none; /* Cacher le .svg-container par défaut */
 }
 
-.entree__card:hover .svg-container {
+.menu__card:hover .anim-container {
   display: block; /* Afficher le .svg-container au survol de .entree__card */
 }
 
@@ -166,105 +160,6 @@ font-size: 24px; // Taille de l'icône (ajustez selon vos besoins)
 position: absolute;
 top: -20px;
 }
-  
-
-
-
-
-
-
-
-.plat{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-
-  &__title{
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-  &__card{
-    align-self: stretch;
-    background: white;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    align-items: center; 
-    display: grid;
-    padding: 15px;
-    border-radius:  15px;
-    width: auto;
-    height: 69px;
-  }
-  &__name{
-    overflow: hidden;
-    font-size: 15px;
-    }
-  &__subtitle{
-    overflow: hidden;
-    font-size: 15px;
-    font-weight: 300;
-     }
-  
-  &__price{
-    display: flex;
-    justify-content: end;
-    font-size: 15px;
-    font-weight: 700;
- 
-    }
-    &__currency{
-      font-size: 15px;
-      font-weight: 700;
-      }
-    }
-  
-
-.dessert{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  
-  &__title{
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: uppercase;
-
-  }
-  &__card{
-    align-self: stretch;
-  background: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-  align-items: center; 
-  display: grid;
-  padding: 15px;
-  border-radius:  15px;
-  width: auto;
-  height: 69px;
-  }
-  &__name{
-  overflow: hidden;
-  font-size: 15px;
-  }
-  &__subtitle{
- overflow: hidden;
- font-size: 15px;
- font-weight: 300;
-  }
-  &__price{
-    font-size: 15px;
-    font-weight: 700;
-    display: flex;
-    justify-content: end;
-  
-    }
-    &__currency{
-      display: contents;
-      }
-}
 
 .green-line {
   width: 40px;
@@ -273,63 +168,7 @@ top: -20px;
   border: 1px solid #99E2D0;
 }
 
-.footer {
-  display: flex;
-  width: auto;
-  height: 100%;
-  padding: 30px 25px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 16px;
-  flex-direction: column;
-  background-color: var(--grey);
 
-&__logo {
-  display: flex;
-  width: 139px;
-  height: 27px;
-  justify-content: center;
-  align-items: center;
-}
-
-&__logo-img {
-  max-width: 100%;
-  height: auto;
-  filter: invert(100%);
-}
-
-&__links {
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  flex-direction: column;
-}
-
-&__icon {
-  color: var(--white);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: normal;
-  text-decoration: none;
-}
-
-&__link {
-  color: var(--white);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: normal;
-  text-decoration: none;}
-
-}
-
-@media (max-width: 1440px){
-  /* Vos règles CSS pour 1440px et moins */
-}
-
-
-///footer 1440px///
 .footer {
   display: flex;
   width: 100%;

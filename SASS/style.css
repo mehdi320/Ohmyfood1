@@ -554,13 +554,13 @@
 }
 
 /* Votre SCSS existant */
-.entree {
+.menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
 }
-.entree__title {
+.menu__title {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 300;
@@ -568,7 +568,7 @@
   margin-right: 87%;
   margin-bottom: 0;
 }
-.entree__card {
+.menu__card {
   align-self: stretch;
   background: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -582,28 +582,23 @@
   cursor: pointer;
 }
 @media (min-width: 1440px) {
-  .entree__card {
+  .menu__card {
     width: 100%;
     font-size: 20px;
-    background-color: 0;
   }
 }
-.entree__name {
+.menu__name {
   font-size: 15px;
 }
-.entree__subtitle {
+.menu__subtitle {
   font-size: 15px;
   font-weight: 300;
 }
-.entree__price {
+.menu__currency {
+  font-size: 15px;
+  font-weight: 700;
   display: flex;
   justify-content: end;
-  font-size: 15px;
-  font-weight: 700;
-}
-.entree__currency {
-  font-size: 15px;
-  font-weight: 700;
 }
 
 .green-line {
@@ -613,7 +608,7 @@
   border: 1px solid #99E2D0;
 }
 
-.svg-container {
+.anim-container {
   position: absolute;
   width: 60px;
   height: 69px;
@@ -622,7 +617,7 @@
   display: none; /* Cacher le .svg-container par défaut */
 }
 
-.entree__card:hover .svg-container {
+.menu__card:hover .anim-container {
   display: block; /* Afficher le .svg-container au survol de .entree__card */
 }
 
@@ -668,91 +663,6 @@ i.fa-solid.fa-check {
   top: -20px;
 }
 
-.plat {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
-.plat__title {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.plat__card {
-  align-self: stretch;
-  background: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  align-items: center;
-  display: grid;
-  padding: 15px;
-  border-radius: 15px;
-  width: auto;
-  height: 69px;
-}
-.plat__name {
-  overflow: hidden;
-  font-size: 15px;
-}
-.plat__subtitle {
-  overflow: hidden;
-  font-size: 15px;
-  font-weight: 300;
-}
-.plat__price {
-  display: flex;
-  justify-content: end;
-  font-size: 15px;
-  font-weight: 700;
-}
-.plat__currency {
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.dessert {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-}
-.dessert__title {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.dessert__card {
-  align-self: stretch;
-  background: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  align-items: center;
-  display: grid;
-  padding: 15px;
-  border-radius: 15px;
-  width: auto;
-  height: 69px;
-}
-.dessert__name {
-  overflow: hidden;
-  font-size: 15px;
-}
-.dessert__subtitle {
-  overflow: hidden;
-  font-size: 15px;
-  font-weight: 300;
-}
-.dessert__price {
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-  justify-content: end;
-}
-.dessert__currency {
-  display: contents;
-}
-
 .green-line {
   width: 40px;
   height: 3px;
@@ -760,55 +670,6 @@ i.fa-solid.fa-check {
   border: 1px solid #99E2D0;
 }
 
-.footer {
-  display: flex;
-  width: auto;
-  height: 100%;
-  padding: 30px 25px;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 16px;
-  flex-direction: column;
-  background-color: var(--grey);
-}
-.footer__logo {
-  display: flex;
-  width: 139px;
-  height: 27px;
-  justify-content: center;
-  align-items: center;
-}
-.footer__logo-img {
-  max-width: 100%;
-  height: auto;
-  filter: invert(100%);
-}
-.footer__links {
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  flex-direction: column;
-}
-.footer__icon {
-  color: var(--white);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: normal;
-  text-decoration: none;
-}
-.footer__link {
-  color: var(--white);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: normal;
-  text-decoration: none;
-}
-
-@media (max-width: 1440px) {
-  /* Vos règles CSS pour 1440px et moins */
-}
 .footer {
   display: flex;
   width: 100%;
