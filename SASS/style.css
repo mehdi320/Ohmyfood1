@@ -518,12 +518,19 @@
 }
 
 .icon {
+  top: 2%;
+  right: 30px;
   position: absolute;
-  top: 5%;
-  right: 30%;
-  transform: translateY(-50%);
-  font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
-  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
+}
+@media (min-width: 1440px) {
+  .icon {
+    position: absolute;
+    top: 5%;
+    right: 30%;
+    transform: translateY(-50%);
+    font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
+    transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
+  }
 }
 
 /* Styles pour le cœur rose */
@@ -534,11 +541,19 @@
 
 /* Effet de survol */
 .icon:hover + .heart-pink {
-  color: #ffb6c1; /* Couleur rose au survol du cœur de base */
-  top: 4%;
-  right: 30%;
-  font-size: 24px;
+  top: 2%;
+  right: 30PX;
+  font-size: 15px;
   position: absolute;
+}
+@media (min-width: 1440px) {
+  .icon:hover + .heart-pink {
+    color: #ffb6c1; /* Couleur rose au survol du cœur de base */
+    top: 4%;
+    right: 30%;
+    font-size: 24px;
+    position: absolute;
+  }
 }
 
 .container-background {
