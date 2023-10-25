@@ -210,6 +210,29 @@
   width: 24px;
   height: 24px;
   position: absolute;
+  top: 10%;
+  left: -12px;
+  top: calc(50% - 12px);
+}
+.cur.second::before {
+  content: "2";
+  color: #fff;
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -12px;
+  top: calc(50% - 12px);
+}
+.cur.third::before {
+  content: "3";
+  color: #fff;
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
   left: -12px;
   top: calc(50% - 12px);
 }
@@ -221,45 +244,6 @@
 
 .i-restaurants {
   padding-right: 27px;
-}
-
-.custom__number {
-  color: #9356dc;
-  background-color: #9356dc;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  position: relative;
-  top: 8%;
-}
-@media (min-width: 1440px) {
-  .custom__number {
-    background-color: #9356dc;
-    border-radius: 50%;
-    color: #9356dc;
-    width: 0;
-    height: 0;
-    position: relative;
-    top: 25%;
-    left: 1%;
-  }
-}
-
-.white-text {
-  color: white;
-  display: grid;
-  position: absolute;
-  margin-left: 3px;
-  font-weight: 500;
-  top: 10%;
-}
-@media (min-width: 1440px) {
-  .white-text {
-    top: 69%;
-    margin-left: 3px;
-    font-weight: 500;
-    color: #fff;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -646,6 +630,26 @@
   position: absolute;
   top: 40%;
   right: 5%;
+}
+
+/* Styles pour les points de suspension lorsque l'animation apparaît à droite */
+.your-animation.right .your-price {
+  font-size: 15px; /* Gardez la même taille de police que le prix */
+  font-weight: 700; /* Gardez la même épaisseur de police que le prix */
+  color: transparent; /* Masquez le texte du prix en le rendant transparent */
+  background-color: transparent; /* Masquez le fond en le rendant transparent */
+  position: absolute;
+  top: 40%;
+  right: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Styles pour les points de suspension */
+.your-animation.right .your-price::before {
+  content: "..."; /* Affichez les points de suspension */
+  color: #000; /* Couleur des points de suspension, à ajuster selon vos besoins */
+  background-color: transparent; /* Fond transparent */
 }
 
 .green-line {

@@ -230,10 +230,33 @@ $loader-animation: spin 1s linear infinite;
     width: 24px;
     height: 24px;
     position: absolute;
-    //position: relative;
+    top: 10%;
     left:-12px;
     top:calc(50% - 12px);
-    //top: 8%;
+
+  }
+  &.second::before {
+    content: "2";
+    color: #fff;
+    background-color: #9356dc;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left:-12px;
+    top:calc(50% - 12px);
+  
+  }
+  &.third::before{
+    content: "3";
+    color: #fff;
+    background-color: #9356dc;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left:-12px;
+    top:calc(50% - 12px);
   }
 }
 
@@ -246,44 +269,6 @@ $loader-animation: spin 1s linear infinite;
   padding-right: 27px;
 }
 
-.custom__number {
-  color: #9356dc;
-  background-color: #9356dc;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  position: relative;
-  top: 8%;
-  @media (min-width: 1440px) {
-    background-color: #9356dc;
-    border-radius: 50%;
-    color: #9356dc;
-    width: 0;
-    height: 0;
-    position: relative;
-    top: 25%;
-    left: 1%;
-  }
-}
-
-
-
-// prendre ce qu'il y'a a prendre dans white-text et le mettre dans before 1,2 et3
-.white-text {
-  color: #ffff;
-  display: grid;
-  position: absolute;
-  margin-left: 3px;
-  font-weight: 500;
-  top: 10%;
-
-  @media (min-width: 1440px) {
-    top: 69%;
-    margin-left: 3px;
-    font-weight: 500;
-    color: #fff;
-  }
-}
 
 .Restaurants {
   @media (min-width: 1440px) {
