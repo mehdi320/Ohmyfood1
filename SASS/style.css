@@ -518,7 +518,7 @@
 }
 
 .icon {
-  top: 2%;
+  top: 24px;
   right: 30px;
   position: absolute;
 }
@@ -541,10 +541,11 @@
 
 /* Effet de survol */
 .icon:hover + .heart-pink {
-  top: 2%;
+  top: 24px;
   right: 30PX;
   font-size: 15px;
   position: absolute;
+  color: #ffb6c1;
 }
 @media (min-width: 1440px) {
   .icon:hover + .heart-pink {
@@ -675,20 +676,20 @@
 }
 
 .anim-container {
-  width: 59px;
-  height: 69px;
+  width: 80px;
+  height: 100%;
   left: 85%;
-  top: 10px;
+  top: 0;
   display: none;
   position: absolute;
 }
 @media (min-width: 1440px) {
   .anim-container {
     position: absolute;
-    width: 60px;
-    height: 69px;
+    width: 80px;
+    height: 99px;
     left: 96%;
-    top: 10px;
+    top: 0;
     display: none; /* Cacher le .svg-container par défaut */
   }
 }
@@ -718,6 +719,18 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+@media (min-width: 1440px) {
+  .white-shape {
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+}
 
 .inner-white-shape {
   width: 50%;
@@ -728,6 +741,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+}
+@media (min-width: 1440px) {
+  .inner-white-shape {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    top: 53%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
 }
 
 i.fa-solid.fa-check {
