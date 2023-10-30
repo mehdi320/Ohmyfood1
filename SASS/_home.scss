@@ -27,16 +27,17 @@ $loader-animation: spin 1s linear infinite;
   animation: stop 3s linear;
   opacity: 0; /* Définissez l'opacité par défaut à 0 */
   transition: opacity 0.5s linear; /* Ajoutez une transition par défaut */
-}
 
-&__loading {
+
+  &__loading {
   border: 6px solid #3498db;
   border-top: 6px solid transparent;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
-
+  }
+}
 
 @keyframes spin {
   0% {
@@ -73,7 +74,7 @@ $loader-animation: spin 1s linear infinite;
   opacity: 1;
   transition: opacity 0.5s linear; /* Transition pour l'état "stop" */
 }
-}
+
 
 .all {
 margin: 0;
@@ -212,17 +213,17 @@ margin: 0;
   font-weight: 500;
   position: relative;
 
-&__title {
+  &__title {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     margin-top: -25px;
     padding-left: 15px;
   }
-&__restaurant {
+  &__restaurant {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     padding-left: 32px;
-}
+  }
 
 
   &::before {
@@ -399,7 +400,7 @@ margin: 0;
   flex-direction: column;
   background-color: var(--grey);
   margin-top: 66px;
-
+  
   @media (min-width: 1440px) {
     display: flex;
     padding: 30px;

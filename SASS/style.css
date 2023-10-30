@@ -23,8 +23,7 @@
   opacity: 0; /* Définissez l'opacité par défaut à 0 */
   transition: opacity 0.5s linear; /* Ajoutez une transition par défaut */
 }
-
-.loading {
+.loader-container__loading {
   border: 6px solid #3498db;
   border-top: 6px solid transparent;
   border-radius: 50%;
@@ -518,17 +517,20 @@
 }
 
 .icon {
-  top: 24px;
+  top: 40px;
   right: 30px;
   position: absolute;
+  transform: translateY(-60%);
+  font-size: 20px;
+  transition: color 0.1s ease-in-out;
 }
 @media (min-width: 1440px) {
   .icon {
     position: absolute;
     top: 5%;
     right: 30%;
-    transform: translateY(-50%);
-    font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
+    transform: translateY(-60%);
+    font-size: 23px; /* Ajustez la taille du cœur selon vos besoins */
     transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
   }
 }
@@ -541,9 +543,9 @@
 
 /* Effet de survol */
 .icon:hover + .heart-pink {
-  top: 24px;
+  top: 40px;
   right: 30PX;
-  font-size: 15px;
+  font-size: 20px;
   position: absolute;
   color: #ffb6c1;
 }
@@ -557,10 +559,26 @@
   }
 }
 
+.icon:hover {
+  color: transparent; /* Le cœur de base devient transparent au survol */
+  font-size: 15px;
+  top: 24px;
+  right: 30px;
+  position: absolute;
+}
+@media (min-width: 1440px) {
+  .icon:hover {
+    top: 4%;
+    right: 30%;
+    font-size: 24px;
+    position: absolute;
+  }
+}
+
 .container-background {
   width: 100%;
   height: auto;
-  background-color: white;
+  background-color: #F6F6F6;
   border-radius: 15px;
   position: relative; /* Ajoutez le positionnement relatif */
   top: -40px; /* Ajustez la valeur en conséquence pour obtenir l'effet souhaité */
@@ -569,7 +587,7 @@
   .container-background {
     width: 80%;
     height: auto;
-    background-color: white;
+    background-color: #F6F6F6;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     position: relative; /* Ajoutez le positionnement relatif */
@@ -582,6 +600,9 @@
 .container-menu {
   padding-left: 10px;
   padding-right: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 @media (min-width: 1440px) {
   .container-menu {
@@ -633,10 +654,16 @@
 }
 .menu__name {
   font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__subtitle {
   font-size: 15px;
   font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__currency {
   font-size: 15px;
@@ -646,33 +673,9 @@
   position: absolute;
   top: 40%;
   right: 5%;
-}
-
-/* Styles pour les points de suspension lorsque l'animation apparaît à droite */
-.your-animation.right .your-price {
-  font-size: 15px; /* Gardez la même taille de police que le prix */
-  font-weight: 700; /* Gardez la même épaisseur de police que le prix */
-  color: transparent; /* Masquez le texte du prix en le rendant transparent */
-  background-color: transparent; /* Masquez le fond en le rendant transparent */
-  position: absolute;
-  top: 40%;
-  right: 5%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* Styles pour les points de suspension */
-.your-animation.right .your-price::before {
-  content: "..."; /* Affichez les points de suspension */
-  color: #000; /* Couleur des points de suspension, à ajuster selon vos besoins */
-  background-color: transparent; /* Fond transparent */
-}
-
-.green-line {
-  width: 40px;
-  height: 3px;
-  background-color: #99E2D0;
-  border: 1px solid #99E2D0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .anim-container {
