@@ -31,22 +31,25 @@ $breakpoint-tablette: (1024px);
   transform: translateY(-60%);
   font-size: 20px;
   transition: color 0.1s ease-in-out;
+
   @media (min-width:1440px){
   position: absolute;
-  top: 5%;
+  top: 79px;
   right: 30%;
   transform: translateY(-60%);
   font-size: 23px; /* Ajustez la taille du cœur selon vos besoins */
   transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
-  @media (min-width: 1024px){}
+  }
+
+  @media (min-width: 1024px){
   top: 40px;
   right: 35%;
   position: absolute;
   transform: translateY(-60%);
   font-size: 20px;
-  transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;}
 }
-}
+
 /* Styles pour le cœur rose */
 .heart-pink {
   color: transparent; /* Le cœur rose est initialement transparent */
@@ -86,6 +89,7 @@ $breakpoint-tablette: (1024px);
 .container-background {
   width: 100%;
   height: auto;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background-color: #F6F6F6;
   border-radius: 15px;
   position: relative; /* Ajoutez le positionnement relatif */
@@ -287,6 +291,22 @@ font-size: 24px; // Taille de l'icône (ajustez selon vos besoins)
 position: absolute;
 top: -20px;
 }
+
+
+
+
+
+
+.cutoff-text{
+--max-lines: 1;
+display: -webkit-box;
+overflow: hidden;
+-webkit-box-orient: horizontal;
+-webkit-line-clamp:var(--max-lines) ;
+}
+
+
+
 
 .green-line {
   width: 40px;

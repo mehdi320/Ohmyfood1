@@ -302,8 +302,7 @@ margin: 0;
 ///ceci est la partie des menus///
 
 .menus {
-  align-items: flex-start;
-  display: flex;
+  display: grid;
   gap: 28px;
   flex-direction: column;
   background-color: #f6f6f6;
