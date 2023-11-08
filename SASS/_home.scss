@@ -295,7 +295,7 @@ margin: 0;
     padding-left: 180px;
     padding-bottom: 30px;
     position: absolute;
-    top: 89%;
+    top: 110%;
     left: 10px;
   }
 }
@@ -307,6 +307,14 @@ margin: 0;
   flex-direction: column;
   background-color: #f6f6f6;
 
+  @media (min-width:1024px)  {
+    align-items: center;
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    padding: 0 180px;
+    }
   @media (min-width: 1440px) {
     display: grid;
     padding: 0px 180px;
@@ -318,14 +326,7 @@ margin: 0;
     background-color: #f6f6f6;
     padding-top: 58px;
   }
-  @media (min-width:1024px)  {
-    align-items: center;
-    display: flex;
-    gap: 28px;
-    flex-direction: column;
-    background-color: #F6F6F6;
-    padding: 0 180px;
-    }
+
 
   &__container {
     display: grid;

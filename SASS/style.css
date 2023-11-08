@@ -266,7 +266,7 @@
     padding-left: 180px;
     padding-bottom: 30px;
     position: absolute;
-    top: 89%;
+    top: 110%;
     left: 10px;
   }
 }
@@ -279,6 +279,16 @@
   /* Styles pour le cœur rose */
   /* Effet de survol */
 }
+@media (min-width: 1024px) {
+  .menus {
+    align-items: center;
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    padding: 0 180px;
+  }
+}
 @media (min-width: 1440px) {
   .menus {
     display: grid;
@@ -290,16 +300,6 @@
     grid-template-columns: repeat(2, 1fr);
     background-color: #f6f6f6;
     padding-top: 58px;
-  }
-}
-@media (min-width: 1024px) {
-  .menus {
-    align-items: center;
-    display: flex;
-    gap: 28px;
-    flex-direction: column;
-    background-color: #F6F6F6;
-    padding: 0 180px;
   }
 }
 .menus__container {
@@ -703,51 +703,55 @@
 }
 .menu__name {
   font-size: 15px;
-  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .menu__subtitle {
   font-size: 15px;
   font-weight: 300;
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .menu__currency {
   font-size: 15px;
   font-weight: 700;
-  display: flex;
-  justify-content: end;
-  position: absolute;
-  top: 40%;
-  right: 5%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  transition: transform 0.3s ease; /* Transition pour le déplacement horizontal du prix */
+  transform: translateX(0);
+}
+
+.menu__card:hover .menu__currency {
+  transform: translateX(-68px); /* Ajustez cette valeur en fonction de la distance souhaitée */
 }
 
 .anim-container {
   width: 80px;
   height: 100%;
-  left: 85%;
+  left: 76%;
   top: 0;
   display: none;
   position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
 }
 @media (min-width: 1440px) {
   .anim-container {
     position: absolute;
     width: 80px;
     height: 99px;
-    left: 96%;
+    left: 89%;
     top: 0;
-    display: none; /* Cacher le .svg-container par défaut */
+    display: none; /* Cacher le .anim-container par défaut */
+    transform: scaleX(0);
+    transform-origin: right;
   }
 }
 
 .menu__card:hover .anim-container {
-  display: block; /* Afficher le .svg-container au survol de .entree__card */
+  display: block; /* Afficher le .anim-container au survol de .entree__card */
+  transform: scaleX(1);
 }
 
 .green-shape {
@@ -763,7 +767,7 @@
 
 .white-shape {
   width: 70%;
-  height: 70%;
+  height: 58%;
   background-color: white;
   position: absolute;
   top: 50%;
@@ -814,14 +818,6 @@ i.fa-solid.fa-check {
   font-size: 24px;
   position: absolute;
   top: -20px;
-}
-
-.cutoff-text {
-  --max-lines: 1;
-  display: -webkit-box;
-  overflow: hidden;
-  -webkit-box-orient: horizontal;
-  -webkit-line-clamp: var(--max-lines);
 }
 
 .green-line {
