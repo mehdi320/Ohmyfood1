@@ -451,6 +451,10 @@
   font-weight: 500;
   line-height: normal;
   text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  flex-direction: column;
 }
 @media (min-width: 1440px) {
   .footers__links {
@@ -557,7 +561,7 @@
 }
 @media (min-width: 1024px) {
   .icon {
-    top: 40px;
+    top: 82px;
     right: 35%;
     position: absolute;
     transform: translateY(-60%);
@@ -839,7 +843,6 @@ i.fa-solid.fa-check {
 @media (min-width: 1440px) {
   .footer {
     display: flex;
-    width: 100%;
     height: auto;
     padding: 30px 25px;
     gap: 16px;
@@ -865,6 +868,7 @@ i.fa-solid.fa-check {
   display: flex;
   align-items: flex-start;
   gap: 7px;
+  flex-direction: column;
 }
 @media (min-width: 1440px) {
   .footer__links {
