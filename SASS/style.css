@@ -86,8 +86,6 @@
   align-items: center;
   justify-content: center;
   font-family: "Roboto", sans-serif;
-  margin-bottom: 15px;
-  border-top: 2px solid #eaeaea;
   font-size: 16px;
 }
 
@@ -220,8 +218,10 @@
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  display: flex;
+  justify-content: center;
   position: absolute;
-  top: 10%;
+  align-items: center;
   left: -12px;
   top: calc(50% - 12px);
 }
@@ -232,7 +232,10 @@
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  display: flex;
+  justify-content: center;
   position: absolute;
+  align-items: center;
   left: -12px;
   top: calc(50% - 12px);
 }
@@ -243,7 +246,10 @@
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  display: flex;
+  justify-content: center;
   position: absolute;
+  align-items: center;
   left: -12px;
   top: calc(50% - 12px);
 }
@@ -285,7 +291,6 @@
   flex-direction: column;
   background-color: #f6f6f6;
   /* Styles pour le cœur rose */
-  /* Effet de survol */
 }
 @media (min-width: 1024px) {
   .menus {
@@ -333,6 +338,8 @@
 .menus__img {
   width: 100%;
   height: 231px;
+  -o-object-fit: cover;
+     object-fit: cover;
   align-self: stretch;
 }
 @media (min-width: 1440px) {
@@ -340,7 +347,12 @@
     width: 100%;
     height: 231px;
     align-self: stretch;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
+}
+.menus__text {
+  height: 70px;
 }
 .menus__title {
   padding-left: 13px;
@@ -351,26 +363,27 @@
   font-family: "Roboto", sans-serif;
   padding-left: 13px;
 }
-.menus__icon {
+.menus .heart__icon i {
+  position: absolute;
+  cursor: pointer;
   position: absolute;
   top: 85%;
   right: 50px;
-  transform: translateY(-50%);
-  font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
-  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
-}
-.menus .heart-pink {
-  color: transparent; /* Le cœur rose est initialement transparent */
-  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
-}
-.menus .menus__icon:hover + .heart-pink {
-  color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  top: 81%;
-  right: 50px;
   font-size: 24px;
-  position: absolute;
+}
+.menus .my-heart-full {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#ff79dA, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.menus .my-heart-full:hover {
+  opacity: 1;
+  background-position: 0% 100%;
+  background-image: linear-gradient(#ff79dA, #9356dc);
+  transition: opacity 3s ease-in-out;
 }
 
 .new_badge {
@@ -496,8 +509,7 @@
 .image-title {
   margin-top: 31px;
   margin-bottom: 42px;
-  width: 69%;
-  height: auto;
+  width: auto;
 }
 @media (min-width: 1024px) {
   .image-title {
@@ -517,7 +529,7 @@
 }
 
 .icon {
-  top: 10%;
+  top: 4%;
   right: 30px;
   position: absolute;
   transform: translateY(-60%);
@@ -526,7 +538,6 @@
 }
 @media (min-width: 1024px) {
   .icon {
-    top: 10%;
     right: 35%;
     position: absolute;
     transform: translateY(-60%);
@@ -537,7 +548,7 @@
 @media (min-width: 1440px) {
   .icon {
     position: absolute;
-    top: 15%;
+    top: 8%;
     right: 30%;
     transform: translateY(-60%);
     font-size: 23px; /* Ajustez la taille du cœur selon vos besoins */
@@ -553,7 +564,7 @@
 
 /* Effet de survol */
 .icon:hover + .heart-pink {
-  top: 8%;
+  top: 3%;
   right: 30PX;
   font-size: 20px;
   position: absolute;
@@ -563,7 +574,6 @@
 }
 @media (min-width: 1024px) {
   .icon:hover + .heart-pink {
-    top: 8%;
     right: 35%;
     font-size: 20px;
     position: absolute;
@@ -571,7 +581,7 @@
 }
 @media (min-width: 1440px) {
   .icon:hover + .heart-pink {
-    top: 13%;
+    top: 6%;
     right: 30%;
     font-size: 24px;
     position: absolute;
@@ -584,6 +594,14 @@
   top: 5%;
   right: 30px;
   position: absolute;
+}
+@media (min-width: 1024px) {
+  .icon:hover {
+    color: transparent;
+    position: absolute;
+    top: 5%;
+    right: 30px;
+  }
 }
 @media (min-width: 1440px) {
   .icon:hover {

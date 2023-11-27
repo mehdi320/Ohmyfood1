@@ -99,8 +99,6 @@ margin: 0;
     align-items: center;
     justify-content: center;
     font-family: "Roboto", sans-serif;
-    margin-bottom: 15px;
-    border-top: 2px solid #eaeaea;
     font-size: 16px;
   }
 }
@@ -245,35 +243,41 @@ margin: 0;
     border-radius: 50%;
     width: 24px;
     height: 24px;
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: 10%;
-    left:-12px;
-    top:calc(50% - 12px);
-
-  }
-  &.second::before {
-    content: "2";
-    color: #fff;
-    background-color: #9356dc;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left:-12px;
-    top:calc(50% - 12px);
-  
-  }
-  &.third::before{
-    content: "3";
-    color: #fff;
-    background-color: #9356dc;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left:-12px;
-    top:calc(50% - 12px);
-  }
+    align-items: center;
+    left: -12px;
+    top: calc(50% - 12px);
+}
+&.second::before {
+  content: "2";
+  color: #fff;
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  left: -12px;
+  top: calc(50% - 12px);
+}
+&.third::before{
+  content: "3";
+  color: #fff;
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  left: -12px;
+  top: calc(50% - 12px);
+}
 }
 
 .i-restaurant {
@@ -295,7 +299,7 @@ margin: 0;
     padding-left: 180px;
     padding-bottom: 30px;
     position: absolute;
-    top: 110%;
+    top: 490px;
     left: 10px;
   }
   @media (min-width:1024px)  {
@@ -359,12 +363,17 @@ margin: 0;
   &__img {
     width: 100%;
     height: 231px;
+    object-fit: cover;
     align-self: stretch;
     @media (min-width: 1440px) {
       width: 100%;
       height: 231px;
       align-self: stretch;
+      object-fit: cover;
     }
+  }
+  &__text{
+  height: 70px;
   }
   &__title {
     padding-left: 13px;
@@ -376,33 +385,32 @@ margin: 0;
     padding-left: 13px;
   }
 
-  &__icon {
-    position: absolute;
-    top: 85%;
-    right: 50px;
-    transform: translateY(-50%);
-    font-size: 24px; /* Ajustez la taille du cœur selon vos besoins */
-    transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
-  }
 
 
   /* Styles pour le cœur rose */
-  .heart-pink {
-    color: transparent; /* Le cœur rose est initialement transparent */
-    transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
-    
-  }
-
-  /* Effet de survol */
-  .menus__icon:hover + .heart-pink {
-    color: transparent;
-    background-image: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    top: 81%;
+  .heart__icon i {
+    position: absolute;
+    cursor: pointer;
+    position: absolute;
+    top: 85%;
     right: 50px;
     font-size: 24px;
-    position: absolute;
-  }
+}
+
+.my-heart-full {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(#ff79dA, #9356dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.my-heart-full:hover {
+  opacity: 1;
+  background-position: 0% 100%;
+  background-image: linear-gradient(#ff79dA, #9356dc);
+  transition: opacity 3s ease-in-out;
+}
 }
 
 .new_badge {
