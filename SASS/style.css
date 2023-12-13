@@ -272,7 +272,7 @@
     padding-left: 180px;
     padding-bottom: 30px;
     position: absolute;
-    top: 110%;
+    top: 490px;
     left: 10px;
   }
 }
@@ -504,6 +504,8 @@
 .image {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .image-title {
@@ -528,88 +530,46 @@
   }
 }
 
-.icon {
-  top: 4%;
-  right: 30px;
+.heart__icon i {
+  cursor: pointer;
   position: absolute;
-  transform: translateY(-60%);
-  font-size: 20px;
-  transition: color 0.1s ease-in-out;
-}
-@media (min-width: 1024px) {
-  .icon {
-    right: 35%;
-    position: absolute;
-    transform: translateY(-60%);
-    font-size: 20px;
-    transition: color 0.1s ease-in-out;
-  }
-}
-@media (min-width: 1440px) {
-  .icon {
-    position: absolute;
-    top: 8%;
-    right: 30%;
-    transform: translateY(-60%);
-    font-size: 23px; /* Ajustez la taille du cœur selon vos besoins */
-    transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
-  }
-}
-
-/* Styles pour le cœur rose */
-.heart-pink {
-  color: transparent; /* Le cœur rose est initialement transparent */
-  transition: color 0.1s ease-in-out; /* Ajoutez une transition pour l'effet de couleur */
-}
-
-/* Effet de survol */
-.icon:hover + .heart-pink {
   top: 3%;
-  right: 30PX;
-  font-size: 20px;
-  position: absolute;
-  color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
+  right: 0px;
+  font-size: 24px;
 }
 @media (min-width: 1024px) {
-  .icon:hover + .heart-pink {
-    right: 35%;
-    font-size: 20px;
+  .heart__icon i {
+    cursor: pointer;
     position: absolute;
+    top: 3%;
+    right: 55%;
+    font-size: 24px;
   }
 }
 @media (min-width: 1440px) {
-  .icon:hover + .heart-pink {
+  .heart__icon i {
+    cursor: pointer;
+    position: absolute;
     top: 6%;
     right: 30%;
     font-size: 24px;
-    position: absolute;
   }
 }
 
-.icon:hover {
-  color: transparent; /* Le cœur de base devient transparent au survol */
-  font-size: 15px;
-  top: 5%;
-  right: 30px;
-  position: absolute;
+.my-heart-full {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(#ff79dA, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
-@media (min-width: 1024px) {
-  .icon:hover {
-    color: transparent;
-    position: absolute;
-    top: 5%;
-    right: 30px;
-  }
-}
-@media (min-width: 1440px) {
-  .icon:hover {
-    top: 4%;
-    right: 30%;
-    font-size: 24px;
-    position: absolute;
-  }
+
+.my-heart-full:hover {
+  opacity: 1;
+  background-position: 0% 100%;
+  background-image: linear-gradient(#ff79dA, #9356dc);
+  transition: opacity 3s ease-in-out;
 }
 
 .container-background {
