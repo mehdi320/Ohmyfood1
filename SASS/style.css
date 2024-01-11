@@ -282,7 +282,7 @@
     padding-left: 180px;
     padding-bottom: 30px;
     position: absolute;
-    top: 54%;
+    top: 75%;
     left: 10px;
   }
 }
@@ -432,7 +432,6 @@
     background-color: var(--grey);
     margin-top: -22px;
     padding-left: 22px;
-    width: 100%;
   }
 }
 .footers__logo {
@@ -686,6 +685,7 @@
   display: inline-block; /* Pour que la bordure s'ajuste à la largeur du texte */
   margin-bottom: 8px; /* Ajustez selon vos besoins pour l'espace entre le texte et la ligne */
   margin-top: 40px;
+  width: 2rem;
 }
 
 .footer {
@@ -773,6 +773,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .logo {
