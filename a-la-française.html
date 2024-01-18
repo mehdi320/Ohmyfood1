@@ -22,6 +22,9 @@
   <body id="menu-page">
     <img src="asset/ohmyfood@2x.svg" alt="Logo Oh My Food" class="logo" />
     <div>
+      <a href="index.html" class="arrow-container">
+        <i class="fa-solid fa-arrow-left arrow-icon"></i>
+      </a>
       <img
         src="restaurant/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
         alt="A-la-Française"
@@ -32,17 +35,21 @@
     <div class="container-background">
       <div class="container-menu">
         <section class="menu">
-          <img
-            src="restaurant/À la française.png"
-            alt="A-la-Française"
-            class="image-title"
-          />
-          <div class="heart__icon">
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-heart my-heart-full"></i>
+          <div class="title-container">
+            <img
+              src="restaurant/À la française.png"
+              alt="A-la-Française"
+              class="image-title"
+            />
+            <div class="heart-container">
+              <div class="heart__icon">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart my-heart-full"></i>
+              </div>
+            </div>
           </div>
 
-          <p class="green-line">Entrées</p>
+          <h2 class="green-line">ENTRÉES</h2>
           <div class="menu__card">
             <div class="menu__items">
               <div class="menu__description">
@@ -84,7 +91,7 @@
         </section>
 
         <section class="menu">
-          <p class="green-line">Plats</p>
+          <h2 class="green-line">PLATS</h2>
           <div class="menu__card">
             <div class="menu__items">
               <div class="menu__description">
@@ -125,7 +132,7 @@
           </div>
         </section>
         <section class="menu">
-          <p class="green-line">Dessert</p>
+          <h2 class="green-line">DESSERTS</h2>
           <div class="menu__card">
             <div class="menu__items">
               <div class="menu__description">
@@ -165,35 +172,31 @@
           </div>
         </section>
       </div>
-      <section class="button__position">
-        <div class="button">Commander</div>
-      </section>
-
-      <footer class="footer">
-        <div class="footer__logo">
-          <img
-            src="asset/ohmyfood@2x.svg"
-            alt="Logo"
-            class="footer__logo-img"
-          />
-        </div>
-        <div class="footer__links">
-          <span class="icon-link">
-            <i class="fa-solid fa-utensils i-utensils"></i>
-            <a href="#" class="footer__icon">Proposer un restaurant</a>
-          </span>
-
-          <span class="icon-link">
-            <span class="icon-container">
-              <i class="fa-solid fa-handshake-angle i-handshake"></i>
-            </span>
-            <a href="#" class="footer__icon">Devenir partenaire</a>
-          </span>
-
-          <a href="#" class="footer__link">Mentions légales</a>
-          <a href="#" class="footer__link">Contact</a>
-        </div>
-      </footer>
     </div>
+    <section class="button__position">
+      <div class="button">Commander</div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="asset/ohmyfood@2x.svg" alt="Logo" class="footer__logo-img" />
+      </div>
+      <div class="footer__links">
+        <span class="icon-link">
+          <i class="fa-solid fa-utensils i-utensils"></i>
+          <a href="#" class="footer__icon">Proposer un restaurant</a>
+        </span>
+
+        <span class="icon-link">
+          <span class="icon-container">
+            <i class="fa-solid fa-handshake-angle i-handshake"></i>
+          </span>
+          <a href="#" class="footer__icon">Devenir partenaire</a>
+        </span>
+
+        <a href="#" class="footer__link">Mentions légales</a>
+        <a href="#" class="footer__link">Contact</a>
+      </div>
+    </footer>
   </body>
 </html>
