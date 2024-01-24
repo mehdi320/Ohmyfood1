@@ -9,6 +9,11 @@
   box-sizing: border-box;
   }
 
+  :root {
+    --grey: #353535;
+    --white: #fff;
+    --gris: #f6f6f6;
+  }
   ///* ceci est le logo///*
   .logo {
     display: flex;
