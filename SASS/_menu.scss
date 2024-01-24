@@ -19,9 +19,12 @@ height: 283px;
 }
 .arrow-container {
 position: absolute;
-margin-top: 10px;
-top: 2rem;
+top: 3vh;
 padding-left: 10px;
+@media (min-width:1440px){
+  margin-top: 10px;
+  top: 2rem
+}
 }
 
 .arrow-icon {
