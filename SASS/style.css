@@ -540,6 +540,7 @@
   background-position: 0% 100%;
   background-image: linear-gradient(#ff79dA, #9356dc);
   transition: opacity 3s ease-in-out;
+  position: absolute;
 }
 
 .container-background {
@@ -568,7 +569,8 @@
     display: inherit;
     padding: 15px;
     width: 44%;
-    margin-left: 25%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
