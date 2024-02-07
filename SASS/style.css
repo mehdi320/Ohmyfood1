@@ -18,6 +18,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
+  animation-play-state: running;
   align-items: center;
   animation: stop 3s linear;
   opacity: 0; /* Définissez l'opacité par défaut à 0 */
@@ -54,11 +55,6 @@
     transform: scale(1); /* Revenir à la taille d'origine et opacité à 0 */
   }
 }
-.loader-container.stop {
-  opacity: 1;
-  transition: opacity 0.5s linear; /* Transition pour l'état "stop" */
-}
-
 .loader-container.stop {
   opacity: 1;
   transition: opacity 0.5s linear; /* Transition pour l'état "stop" */
@@ -364,7 +360,6 @@
 .menus .heart__icon i {
   position: absolute;
   cursor: pointer;
-  position: absolute;
   top: 80%;
   right: 50px;
   font-size: 24px;
